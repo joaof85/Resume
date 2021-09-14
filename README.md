@@ -1,4 +1,4 @@
-# COMPONETS
+# COMPONENTS
 ## Front page: 
 *animations
 *flexgrid
