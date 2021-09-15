@@ -1,5 +1,4 @@
 import { span } from 'prelude-ls';
-import React from 'react';
 import "./FrontPage.css";
 
 
