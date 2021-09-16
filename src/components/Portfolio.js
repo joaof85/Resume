@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { gitApiUrl, gitApiUrlHeaders } from "../constants/git";
+import { gitApiUrl } from "../constants/git";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import ImgTop from "../git.png"
+import "./Portfolio.css"
+
 
 
 function GitProjectsAxios() {
@@ -11,7 +16,7 @@ function GitProjectsAxios() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     useEffect(() => {
-        const url = axios(gitApiUrl, gitApiUrlHeaders)
+        const url = axios(gitApiUrl)
             .then((response) => {
                 setData(response.data);
             })
@@ -26,24 +31,23 @@ function GitProjectsAxios() {
     if (loading) return "Loading...";
     if (error) return "Error!";
     return (
-        <ul>
+        <div className="wrapper" key={data.id}>
             {data.map(data => (
                 <>
                     <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="/git.png" />
+                        <Card.Img variant="top" src={ImgTop} />
                         <Card.Body>
-                            <Card.Title>{data.name}</Card.Title>
-                            <Card.Text>
+                            <Card.Title className="title">{data.name}</Card.Title>
+                            <Card.Text className="text">
                                 {data.description}
                             </Card.Text>
-                            <a href={data.html_url}><Button variant="primary">{data.language}</Button> </a>
-
+                            <a href={data.html_url}><Button classname="button" variant="primary">{data.language}</Button> </a>
                         </Card.Body>
                     </Card>
                 </>
             ))
             }
-        </ul>
+        </div>
     );
 }
 export default GitProjectsAxios;

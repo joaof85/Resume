@@ -1,0 +1,24 @@
+.wrapper {
+    display: grid;
+}
+
+.card-img-top {
+    width: 50%;
+    align-self: center;
+    
+}
+
+.text {
+    color: black;
+}
+
+.title {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.button {
+    position:absolute;
+    bottom:0;
+}
