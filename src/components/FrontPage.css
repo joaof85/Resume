@@ -37,6 +37,7 @@
 
 h1 {
   text-align: center;
+  color: white !important;
 }
 
 h2 {
@@ -44,3 +45,5 @@ h2 {
   text-align: center;
 
 }
+
+

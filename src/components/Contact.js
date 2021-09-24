@@ -63,6 +63,7 @@ const Contact= () => {
     };
 
     return (
+        <div className="flexGrid">
         <div className='ContactForm'>
             <div className='container'>
                 <div className='row'>
@@ -152,10 +153,12 @@ const Contact= () => {
                                 </button>
                             </form>
                         </div>
-                        <ToastContainer />
+                  
+                            
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

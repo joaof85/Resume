@@ -11,6 +11,7 @@ import "./Portfolio.css"
 
 
 
+
 function GitProjectsAxios() {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -47,6 +48,7 @@ function GitProjectsAxios() {
                 </>
             ))
             }
+            
         </div>
     );
 }
