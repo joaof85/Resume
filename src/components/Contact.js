@@ -4,6 +4,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import emailjs from 'emailjs-com';
 import 'react-toastify/dist/ReactToastify.min.css';
 import "./Contact.scss";
+import Button from "react-bootstrap/Button";
+import pdf from './Joao.Fonseca.pdf';
+import { AiOutlineDownload } from "react-icons/ai";
+
 
 
 const Contact= () => {
@@ -65,12 +69,14 @@ const Contact= () => {
     };
 
     return (
-        <div className="flexGrid">
-        
+        <div className="flexGrid"> 
         <div className='ContactForm'>
             <div className='container'>
                 <div className='row'>
                     <div className='col-12 text-center'>
+                            <div className="contactext">
+                                <p>Get in touch!</p>
+                            </div>
                         <div className='contactForm'>
                             <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
                                 {/* Row 1 of form */}
@@ -157,9 +163,15 @@ const Contact= () => {
                             </form>
                         </div>
                         <ToastContainer />
-                            
+                            <div >
+                                <Button className="buttoncv" variant="primary" href={pdf} target="_blank">
+                                <AiOutlineDownload />
+                                &nbsp;Download CV
+                            </Button>
+                            </div>
                     </div>
                 </div>
+                   
             </div>
         </div>
         </div>
