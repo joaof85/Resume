@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
 import emailjs from 'emailjs-com';
 import 'react-toastify/dist/ReactToastify.min.css';
+import "./Contact.scss";
+
 
 const Contact= () => {
     const {
@@ -64,6 +66,7 @@ const Contact= () => {
 
     return (
         <div className="flexGrid">
+        
         <div className='ContactForm'>
             <div className='container'>
                 <div className='row'>
@@ -153,7 +156,7 @@ const Contact= () => {
                                 </button>
                             </form>
                         </div>
-                  
+                        <ToastContainer />
                             
                     </div>
                 </div>

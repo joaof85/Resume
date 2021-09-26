@@ -1,4 +1,4 @@
-import "./FrontPage.css";
+import "./FrontPage.scss";
 import  { useState } from "react";
 
 

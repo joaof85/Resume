@@ -3,27 +3,35 @@ import FrontPage from './components/FrontPage';
 import NavBar from './components/NavBar';
 import Contact from './components/Contact';
 import About from './components/About';
+import Footer from './components/Footer';
 
 
 
-        function App () {
+function App() {
+    
 
-            
-            return (
+    return (
+        
+
+            <div className='Component_container'>
+                <NavBar />
+                <FrontPage />
+                <Contact />
+                <About />
+                <Footer />
+            </div>
+
+    );
+}
+
+export default App;
+
+
+        
                 
-                <div className='Component_container'>
-                    <NavBar />
-                    <FrontPage />
-                    <Contact />
-                    <About />
-                   
-                            
-                </div>
-            )
-        }
- 
+                
+                
+        
          
     
 
-
-export default App;

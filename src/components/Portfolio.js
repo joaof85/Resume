@@ -7,8 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import ImgTop from "../git.png"
-import "./Portfolio.css"
-
+import "./Portfolio.scss"
+import GitTimer from './TimeCounter'
 
 
 
@@ -17,7 +17,7 @@ function GitProjectsAxios() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     useEffect(() => {
-        const url = axios(gitApiUrl)
+        const url = axios(gitApiUrl, {params: { per_page: 5, type:'member', sort:'updated', diretion:'desc'}})
             .then((response) => {
                 setData(response.data);
             })
@@ -35,14 +35,17 @@ function GitProjectsAxios() {
         <div className="wrapper" key={data.id}>
             {data.map(data => (
                 <>
-                    <Card style={{ width: '18rem' }}>
+
+                    <Card classname="card" style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={ImgTop} />
+                        
                         <Card.Body>
                             <Card.Title className="title">{data.name}</Card.Title>
                             <Card.Text className="text">
                                 {data.description}
                             </Card.Text>
-                            <a href={data.html_url}><Button classname="button" variant="primary">{data.language}</Button> </a>
+                            <a href={data.html_url}><Button classname="button"  variant="primary">View Project</Button> </a>
+                            <GitTimer dataFromPortfolio={data} style={{ position: 'fixed', color: 'black', fontWeight: 'bold' }} />
                         </Card.Body>
                     </Card>
                 </>

@@ -1,9 +1,11 @@
 import React from "react";
-import "./footer.css";
+import "./footer.scss";
+import ToggleTheme from "react-toggle-theme";
 
 
-class Footer extends React.Component {
+class Footer extends React.Component  {
     render() {
+
         return (
             <div className="footer-component">
                 <div className="footer" id="footer">
@@ -23,9 +25,9 @@ class Footer extends React.Component {
                                 alt="My Linkedin"
                             />
                         </a>
-                        
+                       
                     </div>
-                   
+                    <ToggleTheme/>
                     <h3>Copyright © 2021 João Fonseca</h3>
                 </div>
             </div>
