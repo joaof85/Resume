@@ -6,9 +6,10 @@ import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import ImgTop from "../git.png"
-import "./Portfolio.scss"
-import GitTimer from './TimeCounter'
+import ImgTop from "../git.png";
+import "./Portfolio.scss";
+import GitTimer from './TimeCounter';
+
 
 
 
@@ -37,6 +38,7 @@ function GitProjectsAxios() {
                 <>
 
                     <Card classname="card" style={{ width: '18rem' }}>
+                      
                         <Card.Img variant="top" src={ImgTop} />
                         
                         <Card.Body>
